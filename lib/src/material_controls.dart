@@ -113,7 +113,7 @@ class _MaterialControlsState extends State<MaterialControls>
   AnimatedOpacity _buildBottomBar(
     BuildContext context,
   ) {
-    final iconColor = Theme.of(context).textTheme.button!.color;
+    final iconColor = Theme.of(context).textTheme.labelLarge!.color;
 
     return AnimatedOpacity(
       opacity: _hideStuff ? 0.0 : 1.0,
@@ -438,9 +438,9 @@ class _MaterialControlsState extends State<MaterialControls>
           },
           colors: chewieController.materialProgressColors ??
               ChewieProgressColors(
-                  playedColor: Theme.of(context).accentColor,
-                  handleColor: Theme.of(context).accentColor,
-                  bufferedColor: Theme.of(context).backgroundColor,
+                  playedColor: Theme.of(context).colorScheme.secondary,
+                  handleColor: Theme.of(context).colorScheme.secondary,
+                  bufferedColor: Theme.of(context).colorScheme.background,
                   backgroundColor: Theme.of(context).disabledColor),
         ),
       ),
